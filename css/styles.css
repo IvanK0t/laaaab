@@ -1,55 +1,282 @@
-/* Заголовок портфолио */
-.portfolio-title {
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--title-text-color);
-  text-align: center;
-  margin-bottom: 50px;
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --white-color: #ffffff;
+  --bg-dark-color: #2f303a;
+  --light-bg: #f5f7fa;
 }
 
-/* Сетка */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+/* RESET */
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--primary-text-color);
+  background-color: var(--white-color);
+  line-height: 1.6;
+}
+
+/* Контейнер */
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* Секції */
+.section {
+  padding: 94px 0;
+}
+
+/* Хедер */
+.page-header {
+  border-bottom: 1px solid #ececec;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+/* Логотип */
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  text-decoration: none;
+  color: #000;
+  transition: opacity .3s ease;
+}
+
+.logo:hover {
+  opacity: 0.7;
+}
+
+.accent {
+  color: var(--accent-color);
+}
+
+/* Навігація */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  gap: 50px;
+  margin-left: 93px;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--title-text-color);
+  font-weight: 500;
+  padding: 8px 0;
+  transition: color .3s ease, transform .2s ease;
+}
+
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.current {
+  color: var(--accent-color);
+  position: relative;
+}
+
+.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+/* Контакти */
+.auth-nav {
+  display: flex;
+  gap: 40px;
+  margin-left: auto;
+}
+
+.auth-nav .link {
+  color: var(--primary-text-color);
+}
+
+.auth-nav .link:hover {
+  color: var(--accent-color);
+}
+
+/* Герой */
+.hero {
+  background-color: var(--bg-dark-color);
+  text-align: center;
+  padding: 200px 0;
+}
+
+.hero-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  color: var(--white-color);
+  font-weight: 900;
+  font-size: 44px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.hero-button {
+  padding: 14px 36px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background .3s ease, transform .2s ease;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.4);
+  text-decoration: none;
+}
+
+.hero-button:hover {
+  background-color: #188ce8;
+  transform: translateY(-3px);
+}
+
+/* Особливості */
+.features-list {
+  display: flex;
   gap: 30px;
 }
 
-/* Карточка */
+.features-list .item {
+  width: 270px;
+  padding: 20px;
+  background: var(--light-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.features-list .item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.features-list .title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+  letter-spacing: 0.5px;
+}
+
+.features-list .text {
+  font-size: 14px;
+  color: var(--primary-text-color);
+}
+
+/* Портфоліо */
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 .portfolio-card {
   display: block;
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
   text-decoration: none;
   color: var(--title-text-color);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .portfolio-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-/* Фото */
-.portfolio-thumb img {
+.portfolio-card img {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
+  display: block;
 }
 
-/* Подпись */
-.portfolio-info {
-  padding: 20px;
-  background: #fff;
+.portfolio-card h3 {
+  padding: 15px;
+  font-size: 18px;
 }
 
-.portfolio-info h3 {
-  font-size: 20px;
-  margin-bottom: 8px;
+/* Прихований заголовок */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-.portfolio-info p {
-  font-size: 14px;
-  color: var(--primary-text-color);
+/* Футер */
+.footer {
+  background-color: var(--bg-dark-color);
+  padding: 60px 0;
+  color: var(--white-color);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-logo {
+  color: var(--white-color);
+}
+
+.footer-address .link {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color .3s ease;
+}
+
+.footer-address .link:hover {
+  color: var(--accent-color);
+}
+
+.map-link {
+  color: var(--white-color);
 }
