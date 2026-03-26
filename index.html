@@ -1,137 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>WT Markup 03</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- modern-normalize -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/modern-normalize/modern-normalize.css"
-    />
-
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container header__inner">
-        <a href="#" class="logo">Brand</a>
-
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#" class="nav__link nav__link--active">Home</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">About</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Services</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebStudio (ДЗ 03)</title>
+    <!-- Modern Normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Шапка профілю -->
+    <header class="page-header">
+        <div class="container main-nav">
+            <nav class="nav">
+                <a href="./index.html" class="logo"><span class="accent">Web</span>Studio</a>
+                <ul class="site-nav list">
+                    <li class="item"><a href="" class="link current">Студія</a></li>
+                    <li class="item"><a href="" class="link">Портфоліо</a></li>
+                    <li class="item"><a href="" class="link">Контакти</a></li>
+                </ul>
+            </nav>
+            <ul class="auth-nav list">
+                <li class="item"><a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
+                <li class="item"><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
+            </ul>
+        </div>
     </header>
 
     <main>
-      <section class="section hero">
-        <div class="container hero__inner">
-          <div class="hero__content">
-            <h1 class="hero__title">Hero title from layout</h1>
-            <p class="hero__text">
-              Some intro text from your layout. Replace with real content.
-            </p>
-            <button class="button hero__button">Primary action</button>
-          </div>
+        <!-- Герой (Hero) -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
+                <button type="button" class="hero-button">Замовити послугу</button>
+            </div>
+        </section>
 
-          <div class="hero__image-wrapper">
-            <img
-              src="images/hero-image.jpg"
-              alt="Hero"
-              class="hero__image"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section class="section features">
-        <div class="container">
-          <h2 class="section__title">Features</h2>
-
-          <ul class="cards">
-            <li class="cards__item">
-              <div class="card">
-                <img
-                  src="images/icon-1.svg"
-                  alt="Icon 1"
-                  class="card__icon"
-                />
-                <h3 class="card__title">Feature 1</h3>
-                <p class="card__text">
-                  Description from your layout.
-                </p>
-              </div>
-            </li>
-            <li class="cards__item">
-              <div class="card">
-                <img
-                  src="images/icon-2.svg"
-                  alt="Icon 2"
-                  class="card__icon"
-                />
-                <h3 class="card__title">Feature 2</h3>
-                <p class="card__text">
-                  Description from your layout.
-                </p>
-              </div>
-            </li>
-            <li class="cards__item">
-              <div class="card">
-                <img
-                  src="images/icon-3.svg"
-                  alt="Icon 3"
-                  class="card__icon"
-                />
-                <h3 class="card__title">Feature 3</h3>
-                <p class="card__text">
-                  Description from your layout.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <h2 class="section__title">Another section</h2>
-          <p>
-            Здесь вставь контент из макета (списки, текст, картинки и т.п.).
-          </p>
-        </div>
-      </section>
+        <!-- Особливості -->
+        <section class="section">
+            <div class="container">
+                <h2 class="visually-hidden">Наші переваги</h2>
+                <ul class="features-list list">
+                    <li class="item">
+                        <h3 class="title">УВАГА ДО ДЕТАЛЕЙ</h3>
+                        <p class="text">Ідейні міркування, а також початок повсякденної роботи по формуванню позиції.</p>
+                    </li>
+                    <li class="item">
+                        <h3 class="title">ПУНКТУАЛЬНІСТЬ</h3>
+                        <p class="text">Завдання організації, особливо ж рамки і місце навчання кадрів тягне за собою.</p>
+                    </li>
+                    <li class="item">
+                        <h3 class="title">ПЛАНУВАННЯ</h3>
+                        <p class="text">Равним чином консультація з широким активом значною мірою зумовлює.</p>
+                    </li>
+                    <li class="item">
+                        <h3 class="title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+                        <p class="text">Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
 
+    <!-- Футер -->
     <footer class="footer">
-      <div class="container footer__inner">
-        <p class="footer__text">© 2026 Brand</p>
-
-        <ul class="footer__links">
-          <li class="footer__item">
-            <a href="#" class="footer__link">Privacy</a>
-          </li>
-          <li class="footer__item">
-            <a href="#" class="footer__link">Terms</a>
-          </li>
-        </ul>
-      </div>
+        <div class="container">
+            <a href="./index.html" class="logo footer-logo"><span class="accent">Web</span>Studio</a>
+            <address>
+                <ul class="address-list list">
+                    <li class="item"><p class="map-link">м. Київ, пр-т Лесі Українки, 26</p></li>
+                    <li class="item"><a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
+                    <li class="item"><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
+                </ul>
+            </address>
+        </div>
     </footer>
-  </body>
+</body>
 </html>
-
-
-
