@@ -1,167 +1,137 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebStudio</title>
+    <title>WT Markup 03</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- modern-normalize -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
+      href="https://unpkg.com/modern-normalize/modern-normalize.css"
     />
 
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-
   <body>
     <header class="header">
-      <div class="container header-container">
-        <a class="logo" href="#">WebStudio</a>
+      <div class="container header__inner">
+        <a href="#" class="logo">Brand</a>
 
         <nav class="nav">
-          <ul class="nav-list">
-            <li><a class="nav-link" href="#">Студія</a></li>
-            <li><a class="nav-link" href="#">Портфоліо</a></li>
-            <li><a class="nav-link" href="#">Контакти</a></li>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--active">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Services</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Contact</a>
+            </li>
           </ul>
         </nav>
-
-        <ul class="contacts">
-          <li>
-            <a class="contact-link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
-          </li>
-          <li>
-            <a class="contact-link" href="tel:+380961111111"
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
       </div>
     </header>
 
-    <section class="hero">
-      <div class="container">
-        <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-        <button class="hero-btn">Замовити послугу</button>
-      </div>
-    </section>
-
-    <section class="advantages">
-      <div class="container">
-        <ul class="adv-list">
-          <li class="adv-item">
-            <img src="images/adv-1.svg" width="70" alt="Іконка" />
-            <h3 class="adv-title">Увага до деталей</h3>
-            <p class="adv-text">
-              Ідейні міркування, і навіть початок повсякденної роботи.
+    <main>
+      <section class="section hero">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <h1 class="hero__title">Hero title from layout</h1>
+            <p class="hero__text">
+              Some intro text from your layout. Replace with real content.
             </p>
-          </li>
+            <button class="button hero__button">Primary action</button>
+          </div>
 
-          <li class="adv-item">
-            <img src="images/adv-2.svg" width="70" alt="Іконка" />
-            <h3 class="adv-title">Пунктуальність</h3>
-            <p class="adv-text">
-              Завдання організації, особливо рамки і місце навчання кадрів.
-            </p>
-          </li>
+          <div class="hero__image-wrapper">
+            <img
+              src="images/hero-image.jpg"
+              alt="Hero"
+              class="hero__image"
+            />
+          </div>
+        </div>
+      </section>
 
-          <li class="adv-item">
-            <img src="images/adv-3.svg" width="70" alt="Іконка" />
-            <h3 class="adv-title">Планування</h3>
-            <p class="adv-text">
-              Так само консультація з широким активом значною мірою.
-            </p>
-          </li>
+      <section class="section features">
+        <div class="container">
+          <h2 class="section__title">Features</h2>
 
-          <li class="adv-item">
-            <img src="images/adv-4.svg" width="70" alt="Іконка" />
-            <h3 class="adv-title">Сучасні технології</h3>
-            <p class="adv-text">
-              Значимість цих проблем настільки очевидна, що реалізація планових
-              завдань.
-            </p>
-          </li>
-        </ul>
-      </div>
-    </section>
+          <ul class="cards">
+            <li class="cards__item">
+              <div class="card">
+                <img
+                  src="images/icon-1.svg"
+                  alt="Icon 1"
+                  class="card__icon"
+                />
+                <h3 class="card__title">Feature 1</h3>
+                <p class="card__text">
+                  Description from your layout.
+                </p>
+              </div>
+            </li>
+            <li class="cards__item">
+              <div class="card">
+                <img
+                  src="images/icon-2.svg"
+                  alt="Icon 2"
+                  class="card__icon"
+                />
+                <h3 class="card__title">Feature 2</h3>
+                <p class="card__text">
+                  Description from your layout.
+                </p>
+              </div>
+            </li>
+            <li class="cards__item">
+              <div class="card">
+                <img
+                  src="images/icon-3.svg"
+                  alt="Icon 3"
+                  class="card__icon"
+                />
+                <h3 class="card__title">Feature 3</h3>
+                <p class="card__text">
+                  Description from your layout.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-    <section class="team">
-      <div class="container">
-        <h2 class="section-title">Наша команда</h2>
-
-        <ul class="team-list">
-          <li class="team-card">
-            <img src="images/team-1.jpg" width="270" alt="Ігор Дем'яненко" />
-            <h3 class="team-name">Ігор Дем'яненко</h3>
-            <p class="team-role">Product Designer</p>
-
-            <ul class="social-list">
-              <li>
-                <a class="social-link" href="#">
-                  <img src="images/instagram.svg" width="20" alt="Instagram" />
-                </a>
-              </li>
-              <li>
-                <a class="social-link" href="#">
-                  <img src="images/twitter.svg" width="20" alt="Twitter" />
-                </a>
-              </li>
-              <li>
-                <a class="social-link" href="#">
-                  <img src="images/facebook.svg" width="20" alt="Facebook" />
-                </a>
-              </li>
-              <li>
-                <a class="social-link" href="#">
-                  <img src="images/linkedin.svg" width="20" alt="LinkedIn" />
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </section>
+      <section class="section">
+        <div class="container">
+          <h2 class="section__title">Another section</h2>
+          <p>
+            Здесь вставь контент из макета (списки, текст, картинки и т.п.).
+          </p>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
-      <div class="container footer-container">
-        <a class="logo footer-logo" href="#">WebStudio</a>
+      <div class="container footer__inner">
+        <p class="footer__text">© 2026 Brand</p>
 
-        <address class="footer-address">
-          <p>м. Київ, пр-т Лесі Українки, 26</p>
-          <a class="footer-link" href="mailto:info@devstudio.com"
-            >info@devstudio.com</a
-          >
-          <a class="footer-link" href="tel:+380961111111"
-            >+38 096 111 11 11</a
-          >
-        </address>
-
-        <ul class="footer-social">
-          <li>
-            <a class="social-link" href="#">
-              <img src="images/instagram.svg" width="20" alt="Instagram" />
-            </a>
+        <ul class="footer__links">
+          <li class="footer__item">
+            <a href="#" class="footer__link">Privacy</a>
           </li>
-          <li>
-            <a class="social-link" href="#">
-              <img src="images/twitter.svg" width="20" alt="Twitter" />
-            </a>
-          </li>
-          <li>
-            <a class="social-link" href="#">
-              <img src="images/facebook.svg" width="20" alt="Facebook" />
-            </a>
-          </li>
-          <li>
-            <a class="social-link" href="#">
-              <img src="images/linkedin.svg" width="20" alt="LinkedIn" />
-            </a>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Terms</a>
           </li>
         </ul>
       </div>
     </footer>
   </body>
 </html>
+
+
 
